@@ -1,0 +1,183 @@
+body,
+header,
+h1,
+h2,
+div,
+footer,
+p,
+img {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: 14px "FZLTXIHJW--GB1-0", "hiragino sans gb", "Microsoft YaHei", "Helvetica Neue", "Helvetica", "STHeiTi", "Arial", "sans-serif";
+}
+body {
+  background-color: #999;
+}
+img {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+/*第一列样式*/
+/*变量*/
+.title {
+  background-color: #fff;
+}
+.title .blackTop {
+  height: 1.8rem;
+  background-color: #333;
+}
+.title h1 {
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 2.3rem;
+  font-weight: 100;
+  color: #131313;
+  padding-left: 5rem;
+}
+/*map*/
+/*变量*/
+#map {
+  height: 28rem;
+  background-color: #999;
+}
+/*showUI*/
+/*变量*/
+.showUI {
+  margin: 0 auto;
+  max-width: 1366px;
+}
+.showUI .page {
+  padding: 10rem 3rem 0 3rem;
+  background-color: #666;
+  overflow: hidden;
+  height: 38rem;
+}
+.showUI .page .left,
+.showUI .page .right {
+  width: 50%;
+  height: 100%;
+}
+.showUI .page .left img,
+.showUI .page .right img {
+  margin: 0 auto;
+}
+.showUI .page .left .font,
+.showUI .page .right .font {
+  margin-top: 8rem;
+  text-align: center;
+  font-weight: 100;
+}
+.showUI .page .left .font p,
+.showUI .page .right .font p {
+  font-size: 1.4rem;
+  color: #333;
+}
+.showUI .page .left .font h2,
+.showUI .page .right .font h2 {
+  font-size: 2.6rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+.showUI .page .left .none,
+.showUI .page .right .none {
+  display: none;
+}
+.showUI .page .left .qr,
+.showUI .page .right .qr {
+  width: 268px;
+  height: 268px;
+}
+.showUI .page .left .phone,
+.showUI .page .right .phone {
+  width: 340px;
+}
+/*foot*/
+/*变量*/
+.foot {
+  background-color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+}
+.foot p {
+  height: 2rem;
+  line-height: 2rem;
+}
+/*768px*/
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    height: 100%;
+  }
+  .title h1 {
+    padding-left: 0;
+    text-align: center;
+  }
+  #map {
+    height: 15rem;
+  }
+  .showUI {
+    height: 100%;
+  }
+  .showUI .page {
+    height: 100%;
+    padding: 0;
+  }
+  .showUI .page .left,
+  .showUI .page .right {
+    height: auto;
+    width: 100%;
+  }
+  .showUI .page .left .font,
+  .showUI .page .right .font {
+    margin: 3rem 0;
+  }
+  .showUI .page .left .font p,
+  .showUI .page .right .font p {
+    font-size: 1rem;
+  }
+  .showUI .page .left .font h2,
+  .showUI .page .right .font h2 {
+    font-size: 2rem;
+  }
+  .showUI .page .left .qr,
+  .showUI .page .right .qr {
+    display: none;
+  }
+  .showUI .page .left .none,
+  .showUI .page .right .none {
+    display: block;
+    margin: 2rem;
+    height: 8rem;
+    background-color: rgba(100, 100, 100, 0.2);
+  }
+  .showUI .page .left .none a,
+  .showUI .page .right .none a {
+    display: block;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  .showUI .page .left .none a img,
+  .showUI .page .right .none a img {
+    display: inline;
+    width: 32px;
+    height: 32px;
+  }
+  .showUI .page .left .phone,
+  .showUI .page .right .phone {
+    width: 60%;
+  }
+  .foot {
+    display: none;
+  }
+}
