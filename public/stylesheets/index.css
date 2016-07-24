@@ -12,7 +12,9 @@ img {
   font: 14px "FZLTXIHJW--GB1-0", "hiragino sans gb", "Microsoft YaHei", "Helvetica Neue", "Helvetica", "STHeiTi", "Arial", "sans-serif";
 }
 body {
-  background-color: #999;
+  background-image: url(../images/bg.jpg);
+  background-size: 100%;
+  background-position: bottom;
 }
 img {
   display: block;
@@ -26,7 +28,7 @@ img {
 /*第一列样式*/
 /*变量*/
 .title {
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 .title .blackTop {
   height: 1.8rem;
@@ -37,7 +39,7 @@ img {
   line-height: 6rem;
   font-size: 2.3rem;
   font-weight: 100;
-  color: #131313;
+  color: #e8a75b;
   padding-left: 5rem;
 }
 /*map*/
@@ -54,9 +56,9 @@ img {
 }
 .showUI .page {
   padding: 10rem 3rem 0 3rem;
-  background-color: #666;
+  /*background-color: #666;*/
   overflow: hidden;
-  height: 38rem;
+  height: 45rem;
 }
 .showUI .page .left,
 .showUI .page .right {
@@ -70,18 +72,18 @@ img {
 .showUI .page .left .font,
 .showUI .page .right .font {
   margin-top: 8rem;
-  text-align: center;
-  font-weight: 100;
+  color: #fff;
+  letter-spacing: 1rem;
 }
 .showUI .page .left .font p,
 .showUI .page .right .font p {
-  font-size: 1.4rem;
-  color: #333;
+  font-weight: 100;
+  font-size: 2.8rem;
 }
 .showUI .page .left .font h2,
 .showUI .page .right .font h2 {
-  font-size: 2.6rem;
-  color: #222;
+  font-weight: 100;
+  font-size: 3.4rem;
   margin-bottom: 1rem;
 }
 .showUI .page .left .none,
@@ -97,11 +99,19 @@ img {
 .showUI .page .right .phone {
   width: 340px;
 }
+.showUI .page .left .font {
+  text-align: left;
+  margin-left: 14rem;
+}
+.showUI .page .right .font {
+  text-align: right;
+  margin-right: 14rem;
+}
 /*foot*/
 /*变量*/
 .foot {
-  background-color: #fff;
-  padding: 1rem 0;
+  /*background-color: #fff;*/
+  padding: 3rem 0;
   text-align: center;
   font-size: 0.8rem;
   color: #999;
@@ -116,6 +126,12 @@ img {
   body {
     height: 100%;
   }
+  body {
+    background-color: #A27A4A;
+    background-size: auto 830%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
   .title h1 {
     padding-left: 0;
     text-align: center;
@@ -124,6 +140,7 @@ img {
     height: 15rem;
   }
   .showUI {
+    margin-top: 3rem;
     height: 100%;
   }
   .showUI .page {
@@ -137,6 +154,7 @@ img {
   }
   .showUI .page .left .font,
   .showUI .page .right .font {
+    text-align: center;
     margin: 3rem 0;
   }
   .showUI .page .left .font p,
@@ -160,6 +178,7 @@ img {
   }
   .showUI .page .left .none a,
   .showUI .page .right .none a {
+    letter-spacing: 0.1rem;
     display: block;
     height: 4rem;
     line-height: 4rem;
