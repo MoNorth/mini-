@@ -42,11 +42,34 @@ img {
   color: #e8a75b;
   padding-left: 5rem;
 }
+.title h1 img {
+  display: inline-block;
+  height: 2rem;
+}
+.title h1 img.logo {
+  height: 3rem;
+  margin-right: 1rem;
+}
 /*map*/
 /*变量*/
 #map {
   height: 28rem;
   background-color: #999;
+}
+/*down箭头动画*/
+@keyframes down-animate {
+  0% {
+    margin-bottom: 0px;
+  }
+  25% {
+    margin-bottom: -5px;
+  }
+  75% {
+    margin-bottom: -5px;
+  }
+  100% {
+    margin-bottom: -10px;
+  }
 }
 /*showUI*/
 /*变量*/
@@ -60,8 +83,33 @@ img {
   overflow: hidden;
   height: 45rem;
 }
+.showUI .page .left {
+  margin-left: -600px;
+}
+.showUI .page .right {
+  margin-right: -600px;
+}
+.showUI .page .down {
+  width: 24%;
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
+  display: none;
+  z-index: -1;
+  animation: down-animate 0.5s linear infinite;
+  -moz-animation: down-animate 0.5s linear infinite;
+  -webkit-animation: down-animate 0.5s linear infinite;
+  -o-animation: down-animate 0.5s linear infinite;
+}
 .showUI .page .left,
 .showUI .page .right {
+  transition: margin 0.3s;
+  -moz-transition: margin 0.3s;
+  /* Firefox 4 */
+  -webkit-transition: margin 0.3s;
+  /* Safari 和 Chrome */
+  -o-transition: margin 0.3s;
+  /* Opera */
   width: 50%;
   height: 100%;
 }
@@ -120,6 +168,11 @@ img {
   height: 2rem;
   line-height: 2rem;
 }
+.foot p img {
+  display: inline-block;
+  height: 1rem;
+  margin-right: 1rem;
+}
 /*768px*/
 @media screen and (max-width: 768px) {
   html,
@@ -136,6 +189,12 @@ img {
     padding-left: 0;
     text-align: center;
   }
+  .title h1 img {
+    display: none;
+  }
+  .title h1 img.logo {
+    display: inline-block;
+  }
   #map {
     height: 15rem;
   }
@@ -146,9 +205,21 @@ img {
   .showUI .page {
     height: 100%;
     padding: 0;
+    /*a.pageFC{
+				display: block;
+				width: 50%;
+				position: absolute;
+				bottom:10%;
+				left: 25%;
+				z-index: -1;
+			}*/
+  }
+  .showUI .page .down {
+    display: block;
   }
   .showUI .page .left,
   .showUI .page .right {
+    /*margin: 0;*/
     height: auto;
     width: 100%;
   }
@@ -192,9 +263,14 @@ img {
     width: 32px;
     height: 32px;
   }
+  .showUI .page .left.phoneF,
+  .showUI .page .right.phoneF {
+    height: 70%;
+  }
   .showUI .page .left .phone,
   .showUI .page .right .phone {
-    width: 60%;
+    width: auto;
+    height: 100%;
   }
   .foot {
     display: none;

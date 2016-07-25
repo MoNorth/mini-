@@ -30,6 +30,7 @@ img{
 		height: @t-b-height;
 		background-color: #333;
 	}
+
 	h1{
 		height: @t-h-height;
 		line-height: @t-h-height;
@@ -37,6 +38,15 @@ img{
 		font-weight: 100;
 		color: #e8a75b;
 		padding-left: 5rem;
+		img{
+			display: inline-block;
+			height: 2rem;
+			&.logo{
+				height: 3rem;
+				margin-right: 1rem;
+			}
+			
+		}
 	}
 }
 
@@ -47,6 +57,17 @@ img{
 	height: @m-height;
 	background-color: #999;
 }
+
+
+/*down箭头动画*/
+@keyframes down-animate
+{
+	0%   {margin-bottom: 0px;}
+	25%  {margin-bottom: -5px;}
+	75%  {margin-bottom: -5px;}
+	100% {margin-bottom: -10px;}
+}
+
 
 /*showUI*/
 /*变量*/
@@ -61,7 +82,29 @@ img{
 		/*background-color: #666;*/
 		overflow: hidden;
 		height: @s-p-height;
+		.left{
+			margin-left: -600px;
+		}
+		.right{
+			margin-right: -600px;
+		}
+		.down{
+			width: 24%;
+			position: absolute;
+			bottom:10%;
+			left: 38%;
+			display: none;
+			z-index: -1;
+			animation: down-animate 0.5s linear infinite ;
+			-moz-animation: down-animate 0.5s linear infinite ;
+			-webkit-animation: down-animate 0.5s linear infinite ;
+		    -o-animation: down-animate 0.5s linear infinite;
+		}
 		.left,.right{
+			transition: margin 0.3s;
+			-moz-transition: margin 0.3s; /* Firefox 4 */
+			-webkit-transition: margin 0.3s; /* Safari 和 Chrome */
+			-o-transition: margin 0.3s; /* Opera */
 			width: 50%;
 			height: 100%;
 			img{
@@ -117,6 +160,11 @@ img{
 	p{
 		height: @f-p-height;
 		line-height: @f-p-height;
+		img{
+			display: inline-block;
+			height: @f-p-height / 2;
+			margin-right: 1rem;
+		}
 	}
 }
 
@@ -136,6 +184,13 @@ img{
 		h1{
 			padding-left: 0;
 			text-align: center;
+			img{
+				display: none;
+				&.logo{
+					display: inline-block;
+
+				}
+			}
 		}
 	}
 
@@ -149,7 +204,19 @@ img{
 		.page{
 			height: 100%;
 			padding: 0;
+			/*a.pageFC{
+				display: block;
+				width: 50%;
+				position: absolute;
+				bottom:10%;
+				left: 25%;
+				z-index: -1;
+			}*/
+			.down{
+				display: block;
+			}
 			.left,.right{
+				/*margin: 0;*/
 				height: auto;
 				width: 100%;
 				.font{
@@ -185,8 +252,12 @@ img{
 						}
 					}
 				}
+				&.phoneF{
+					height: 70%;
+				}
 				.phone{
-					width: 60%;
+					width: auto;
+					height: 100%;
 
 				}
 			}
