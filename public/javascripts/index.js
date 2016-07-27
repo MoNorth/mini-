@@ -47,7 +47,7 @@ var datas = [
 
 // // down按钮事件
 // function downHandle(e){
-	
+
 // }
 
 
@@ -57,23 +57,14 @@ function init(){
         center: new qq.maps.LatLng(22.546003,113.941071),
         zoom: 12
     });
-	// new qq.maps.Marker({
-	//         //设置Marker的位置坐标
-	//         position: new qq.maps.LatLng(22.546003, 113.941071),
-	//         //设置显示Marker的地图
-	//         map: map,
-	//         // animation: qq.maps.MarkerAnimation.BOUNCE,
-	//         // icon: new qq.maps.MarkerImage("../images/" + index % 10 + ".png") 
-	//     });
-	// new qq.maps.Marker({
-	//         //设置Marker的位置坐标
-	//         position: new qq.maps.LatLng(20.546003, 113.941071),
-	//         //设置显示Marker的地图
-	//         map: map,
-	//         // animation: qq.maps.MarkerAnimation.BOUNCE,
-	//         // icon: new qq.maps.MarkerImage("../images/" + index % 10 + ".png") 
-	//     });
 	datas.map(function(data, index){
+
+
+
+
+
+
+		
 		new qq.maps.Marker({
 	        //设置Marker的位置坐标
 	        position: new qq.maps.LatLng(data.x, data.y),
@@ -125,16 +116,28 @@ function leftAndRightAnimate(e){
 		if(scrollPos > $page.scorllTop && scrollPos < $page.height)
 		{
 			//show
-			if($page.L.style.marginLeft != '0x')
+			// if($page.L.style.marginLeft != '0x')
+			// {
+			// 	$page.L.style.marginLeft = '0px';
+			// 	$page.R.style.marginRight = '0px';
+			// }
+			if($page.L.style.transform != 'translateX(0px)')
 			{
-				$page.L.style.marginLeft = '0px';
-				$page.R.style.marginRight = '0px';
+				$page.L.style.transform = 'translateX(0px)';
+				$page.R.style.transform = 'translateX(0px)';
 			}
-		}else if($page.L.style.marginLeft != '-400px')
-		{
+			// $page.L.style.transform = "translateX(-600px)";
+			// console.log($page.L.style.transform);
+		// }else if($page.L.style.marginLeft != '-400px')
+		// {
 	
-			$page.L.style.marginLeft = '-600px';
-			$page.R.style.marginRight = '-600px';
+		// 	$page.L.style.marginLeft = '-600px';
+		// 	$page.R.style.marginRight = '-600px';
+		// }
+		}else if($page.L.style.transform != 'translateX(-600px)')
+		{
+			$page.L.style.transform = 'translateX(-600px)';
+			$page.R.style.transform = 'translateX(600px)';
 		}
 
 	});
@@ -142,3 +145,4 @@ function leftAndRightAnimate(e){
 
 window.onload = init;
 window.onscroll = leftAndRightAnimate;
+

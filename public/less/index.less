@@ -53,9 +53,30 @@ img{
 /*map*/
 /*变量*/
 @m-height : 28rem;
+
 #map{
 	height: @m-height;
 	background-color: #999;
+	.smnoprint{
+		display: none;
+	}
+}
+.map{
+	height: @m-height;
+	position: relative;
+	.shadow{
+		height: @m-height;
+		width: 30%;
+		position: absolute;
+		top:0px;
+		left: 0px;
+		z-index: 999;
+		background-color: rgba(215,238,252,0.7);
+		&.r{
+			left: auto;
+			right: 0px;
+		}
+	}
 }
 
 
@@ -83,10 +104,12 @@ img{
 		overflow: hidden;
 		height: @s-p-height;
 		.left{
-			margin-left: -600px;
+			/*margin-left: -600px;*/
+			transform: translateX(-600px);
 		}
 		.right{
-			margin-right: -600px;
+			/*margin-right: -600px;*/
+			transform: translateX(600px);
 		}
 		.down{
 			width: 24%;
@@ -101,10 +124,10 @@ img{
 		    -o-animation: down-animate 0.5s linear infinite;
 		}
 		.left,.right{
-			transition: margin 0.3s;
-			-moz-transition: margin 0.3s; /* Firefox 4 */
-			-webkit-transition: margin 0.3s; /* Safari 和 Chrome */
-			-o-transition: margin 0.3s; /* Opera */
+			transition: transform 0.3s;
+			-moz-transition: transform 0.3s; /* Firefox 4 */
+			-webkit-transition: transform 0.3s; /* Safari 和 Chrome */
+			-o-transition: transform 0.3s; /* Opera */
 			width: 50%;
 			height: 100%;
 			img{
@@ -196,6 +219,15 @@ img{
 
 	#map{
 		height: 15rem;
+		.smnoprint{
+			display: block;
+		}
+	}
+	.map{
+		height: 15rem;
+		.shadow{
+			display: none;
+		}
 	}
 
 	.showUI{

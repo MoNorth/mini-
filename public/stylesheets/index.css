@@ -56,6 +56,26 @@ img {
   height: 28rem;
   background-color: #999;
 }
+#map .smnoprint {
+  display: none;
+}
+.map {
+  height: 28rem;
+  position: relative;
+}
+.map .shadow {
+  height: 28rem;
+  width: 30%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background-color: rgba(215, 238, 252, 0.7);
+}
+.map .shadow.r {
+  left: auto;
+  right: 0px;
+}
 /*down箭头动画*/
 @keyframes down-animate {
   0% {
@@ -84,10 +104,12 @@ img {
   height: 45rem;
 }
 .showUI .page .left {
-  margin-left: -600px;
+  /*margin-left: -600px;*/
+  transform: translateX(-600px);
 }
 .showUI .page .right {
-  margin-right: -600px;
+  /*margin-right: -600px;*/
+  transform: translateX(600px);
 }
 .showUI .page .down {
   width: 24%;
@@ -103,12 +125,12 @@ img {
 }
 .showUI .page .left,
 .showUI .page .right {
-  transition: margin 0.3s;
-  -moz-transition: margin 0.3s;
+  transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
   /* Firefox 4 */
-  -webkit-transition: margin 0.3s;
+  -webkit-transition: transform 0.3s;
   /* Safari 和 Chrome */
-  -o-transition: margin 0.3s;
+  -o-transition: transform 0.3s;
   /* Opera */
   width: 50%;
   height: 100%;
@@ -197,6 +219,15 @@ img {
   }
   #map {
     height: 15rem;
+  }
+  #map .smnoprint {
+    display: block;
+  }
+  .map {
+    height: 15rem;
+  }
+  .map .shadow {
+    display: none;
   }
   .showUI {
     margin-top: 3rem;
